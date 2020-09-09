@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__."/../src/shrub/src/core/core.php";
+require_once __DIR__."/../backend/src/core/core.php";
 
 $RESPONSE = [];
 

@@ -359,8 +359,10 @@ else {
 	if ( !file_exists($out_fullpath) ) {
 		mkdir($out_fullpath, 0755, true);
 	}
-	header("X-REL: $src_relativefile");
-	header("X-OUT: $out_file");
+	header('Cache-Control: no-cache');	// Should stop CloudFlare from caching this response
+	echo("symlink($src_relativefile, $out_file);");
+	//header("X-REL: $src_relativefile");
+	//header("X-OUT: $out_file");
 	symlink($src_relativefile, $out_file);
 
 	//redirectToSelfAndExit();

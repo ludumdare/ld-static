@@ -362,7 +362,7 @@ else {
 	header('Cache-Control: no-cache');	// Should stop CloudFlare from caching this response
 	header("X-REL: $src_relativefile");
 	header("X-OUT: $out_file");
-	echo("symlink($src_relativefile, $out_file);");
+	//echo("symlink($src_relativefile, $out_file);");
 	symlink($src_relativefile, $out_file);
 
 	//redirectToSelfAndExit();
